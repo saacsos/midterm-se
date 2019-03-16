@@ -26,6 +26,11 @@ class PassengerTicket {
 
     public function getTicket($index)
     {
-        return $this->tickets[$index];
+        if ($index < sizeof($this->tickets)) {
+            return $this->tickets[$index];
+        } else {
+            return null;
+        }
+
     }
 }
