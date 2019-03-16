@@ -10,6 +10,23 @@ class Ticket {
     private $arrivalTime;
     private $bogieNumber;
     private $seatNumber;
+    private $price;
+
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param mixed $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
 
     public function __construct($trainNumber)
     {
