@@ -26,6 +26,12 @@ class PassengerTicket {
 
     public function getTicket($index)
     {
-        return $this->tickets[$index];
+        try {
+            $ticket = $this->tickets[$index];
+        } catch (\OutOfBoundsException $e) {
+            die ($e->getMessage());
+        }
+
+        return $ticket;
     }
 }
